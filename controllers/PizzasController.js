@@ -5,7 +5,7 @@ const pizzas = require('../database/pizzas.json');
 module.exports = {
 
     index: (req, res) => {
-        res.send(pizzas);
+        res.render('index.ejs')
     }
 
 }
