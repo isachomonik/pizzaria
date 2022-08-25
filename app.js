@@ -22,5 +22,5 @@ app.use('/pizzas', PizzasRouter);
 app.get('/', (req,res) => {res.send("Olá, visitante")})
 
 // Pondo a aplicação para rodar escutando na porta 3000
-app.listen(3000, ()=>{console.log("servidor rodando na porta 3000")});
+app.listen(3001, ()=>{console.log("servidor rodando na porta 3000")});
 

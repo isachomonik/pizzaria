@@ -5,7 +5,18 @@ const pizzas = require('../database/pizzas.json');
 module.exports = {
 
     index: (req, res) => {
-        res.render('index.ejs')
+        res.render('index.ejs', {cardapio: pizzas});
+    },
+    show: (req, res) => {
+        let {id} = req.params
+        let pizza = pizzas.find(p => p.id == id);
+        // res.send(pizza)
+
+        res.render('pizza.ejs', {pizza})
+
+        
+    },
+    search: (req, res) => {
     }
 
 }

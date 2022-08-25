@@ -1,118 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaria Fantástica></title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/index.css">
+
     <form action="/busca" method="get">
-        <input type="text" name="q" placeholder="Qual pizza você procura?" autocomplete="off" value="" />
+        <input type="text" name="q" placeholder="Qual pizza você procura?" autocomplete="off" value="">
         <button type="submit">Buscar</button>
     </form>
 
     <main>
+        
+        <% for(let p of cardapio){ %>
         <article>
-            <img src="/img/pepperoni.jpg" alt="Pepperoni" />
-            <a href="/pizzas/2">Ver Mais</a> <button>+ Add</button>
-            <div>Pepperoni</div>
-            <span>R$48.50</span>
+            <img src="<%= p.img %>" alt="<%= p.nome%>">
+            <a href="/pizzas/<%= p.id %>">Ver Mais</a>
+            <button>+Add</button>
+            <div><%= p.nome %></div>
+            <span>R$ <%= p.preco %></span>
         </article>
-        <article>
-            <img src="/img/fracatu.jpg" alt="Fracatupiry" />
-            <a href="/pizzas/3">Ver Mais</a> <button>+ Add</button>
-            <div>Fracatupiry</div>
-            <span>R$38.65</span>
-        </article>
-        <article>
-            <img src="/img/marguerita.jpg" alt="Marguerita" />
-            <a href="/pizzas/4">Ver Mais</a> <button>+ Add</button>
-            <div>Marguerita</div>
-            <span>R$33.50</span>
-        </article>
-        <article>
-            <img src="/img/quatroqueijos.jpg" alt="Quatro Queijos" />
-            <a href="/pizzas/5">Ver Mais</a> <button>+ Add</button>
-            <div>Quatro Queijos</div>
-            <span>R$38.50</span>
-        </article>
-        <article>
-            <img src="/img/quatroqueijos.jpg" alt="Portuguesa" />
-            <a href="/pizzas/6">Ver Mais</a> <button>+ Add</button>
-            <div>Portuguesa</div>
-            <span>R$40.50</span>
-        </article>
-        <article>
-            <img src="/img/quatroqueijos.jpg" alt="Caipira" />
-            <a href="/pizzas/8">Ver Mais</a> <button>+ Add</button>
-            <div>Caipira</div>
-            <span>R$38.50</span>
-        </article>
-        <article>
-            <img src="/img/quatroqueijos.jpg" alt="Napolitana" />
-            <a href="/pizzas/9">Ver Mais</a> <button>+ Add</button>
-            <div>Napolitana</div>
-            <span>R$55.50</span>
-        </article>
-        <article>
-            <img src="/img/quatroqueijos.jpg" alt="Baiana" />
-            <a href="/pizzas/10">Ver Mais</a> <button>+ Add</button>
-            <div>Baiana</div>
-            <span>R$38.50</span>
-        </article>
-        <article>
-            <img src="/img/quatroqueijos.jpg" alt="Meat &amp; Bacon" />
-            <a href="/pizzas/11">Ver Mais</a> <button>+ Add</button>
-            <div>Meat &amp; Bacon</div>
-            <span>R$38.50</span>
-        </article>
-        <article>
-            <img src="/img/quatroqueijos.jpg" alt="Rúcula" />
-            <a href="/pizzas/12">Ver Mais</a> <button>+ Add</button>
-            <div>Rúcula</div>
-            <span>R$38.50</span>
-        </article>
-        <article>
-            <img src="" alt="Jaca" /> <a href="/pizzas/16">Ver Mais</a>
-            <button>+ Add</button>
-            <div>Jaca</div>
-            <span>R$60.00</span>
-        </article>
-        <article>
-            <img src="" alt="asdasd" /> <a href="/pizzas/17">Ver Mais</a>
-            <button>+ Add</button>
-            <div>asdasd</div>
-            <span>R$50.00</span>
-        </article>
-        <article>
-            <img src="" alt="asdasd" /> <a href="/pizzas/18">Ver Mais</a>
-            <button>+ Add</button>
-            <div>asdasd</div>
-            <span>R$44.00</span>
-        </article>
-        <article>
-            <img src="" alt="asdasd" /> <a href="/pizzas/19">Ver Mais</a>
-            <button>+ Add</button>
-            <div>asdasd</div>
-            <span>R$33.00</span>
-        </article>
-        <article>
-            <img src="" alt="teste" /> <a href="/pizzas/20">Ver Mais</a>
-            <button>+ Add</button>
-            <div>teste</div>
-            <span>R$22.04</span>
-        </article>
-        <article>
-            <img src="" alt="treetw" /> <a href="/pizzas/21">Ver Mais</a>
-            <button>+ Add</button>
-            <div>treetw</div>
-            <span>R$502.00</span>
-        </article>
+        <% } %>
+        
     </main>
 </body>
 
