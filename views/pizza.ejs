@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../public/css/styles.css">
+    <title>Pizzaria fantástica</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     
-    <link rel="stylesheet" href="../public/css/pizza.css">
+    <link rel="stylesheet" href="../css/pizza.css">
 
     <main>
     
         <article>
+            <h1><%= pizza.nome %></h1>
+            <h2>R$ <%= pizza.preco %></h2>
             <img src="<%= pizza.img %>" alt="<%= pizza.nome%>">
-            <a href="/pizzas/<%= pizza.id %>">Ver Mais</a>
-            <button>+Add</button>
-            <div><%= pizza.nome %></div>
-            <span>R$ <%= pizza.preco %></span>
+            <div><%= pizza.ingredientes %> </div>
+            <button>+ Add</button>
+
+            
+            <a href="/pizzas/<%= pizza.id + 1%>" class="next">></a>
+            <a href="/pizzas/<%= pizza.id - 1%>" class="prev"><</a>
+            
+            
         </article>
         
     </main>
