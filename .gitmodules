@@ -1,0 +1,3 @@
+[submodule "alimaPizzaria"]
+	path = alimaPizzaria
+	url = https://github.com/Alima07/pizzaria
