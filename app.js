@@ -1,5 +1,6 @@
 // Importando o express
 const express = require('express');
+const RegistraHoraDeAcesso = require('./middlewares/RegistraHoraDeAcesso');
 
 // Criando a aplicação express
 const app = express();
@@ -14,6 +15,8 @@ app.use(express.static("public"));
 
 // Importando o roteador que lida com as rotas de pizza
 const PizzasRouter = require('./routes/PizzasRouter')
+
+app.use(RegistraHoraDeAcesso);
 
 // Fazendo com que a aplicação utilize o roteador para todas as req que chegarem para endereços que comecem com /pizzas
 app.use('/pizzas', PizzasRouter);
