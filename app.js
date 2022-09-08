@@ -1,6 +1,7 @@
 // Importando o express
 const express = require('express');
 const RegistraHoraDeAcesso = require('./middlewares/RegistraHoraDeAcesso');
+const session = require('express-session'); 
 
 // Criando a aplicação express
 const app = express();
@@ -12,6 +13,18 @@ app.set('view engine', 'ejs')
 // Verificando se a requisição é para um arquivo da pasta public
 // caso seja, mande esse arquivo
 app.use(express.static("public"));
+
+// Definição do middleware que configura o cookie da session
+
+app.use(
+    session({
+        secret: 'CHAVE-SECRETA',
+        resave: false,
+        saveUninitialized: true
+    })
+);
+
+app.use(express.urlencoded({ extended: false}));
 
 // Importando o roteador que lida com as rotas de pizza
 const PizzasRouter = require('./routes/PizzasRouter')
