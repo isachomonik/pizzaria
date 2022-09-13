@@ -11,7 +11,10 @@
             <h2>R$ <%= pizza.preco %></h2>
             <img src="<%= pizza.img %>" alt="<%= pizza.nome%>">
             <div><%= pizza.ingredientes %> </div>
-            <button>+ Add</button>
+            <form action="/pizzas/addCart" method="post">
+                <input type="hidden" value="<%= pizza.id %>" name="theChosenOne">
+                <button type="submit">+Add</button>
+            </form>
 
             
             <a href="/pizzas/<%= pizza.id + 1%>" class="next">></a>

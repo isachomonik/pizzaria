@@ -29,7 +29,21 @@ module.exports = {
     },
 
     addCart: (req, res) => {
-        res.send("vou add a pizza to a cart" + req.body.theChosenOne)
+        // Verificar se existe pizza
+
+        // caso haja, basta adicionar ao array
+        // caso não haja, cria um array
+        if(req.session.pizzas){
+            req.session.pizzas.push(req.body.theChosenOne);
+        } else {
+            req.session.pizzas = [req.body.theChosenOne];
+        }
+
+         res.redirect('/pizzas');
+
+         console.log(req.session)
+
     }
+
 
 }
