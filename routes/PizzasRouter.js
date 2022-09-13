@@ -11,8 +11,9 @@ const PontuaPizza = require('../middlewares/PontuaPizza.js');
 // Criando rota que encaminha requisição para o PizzasController.index
 router.get('/', PizzasController.index);
 router.get('/busca', PizzasController.search);
+router.get('/cart', PizzasController.showCart)
 router.get('/:id', PontuaPizza, PizzasController.show);
-router.post('/addCart', PizzasController.addCart)
+router.post('/addCart', PizzasController.addCart);
 
 // Exportando o roteador
 module.exports = router;

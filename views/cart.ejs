@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %>
+
+<body>
+    <link rel="stylesheet" href="/css/cart.css">
+    <div>
+        <table>
+            <% for(p of pizzasDoCarrinho) {%>
+                <tr>
+                    <td>
+                        <img src="<%= p.img %>" alt="<%= p.nome %>">
+                    </td>
+                    <td><%= p.nome %></td>
+                    <td><%= p.preco %></td>
+                </tr>
+                <% } %>
+        </table>
+    </div>
+</body>
+</html>

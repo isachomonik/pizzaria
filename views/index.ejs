@@ -3,6 +3,15 @@
 <body>
     <link rel="stylesheet" href="/css/index.css">
 
+     <form action="/pizzas/busca" method="get" id="form-busca">
+        <input type="text" name="q" placeholder="Qual pizza você procura?" autocomplete="off" value="">
+        <button type="submit">Buscar</button>
+        <a href="/pizzas/cart">
+            <%= quantidade %>
+        </a>
+    </form>
+
+
     
     <main>
         
@@ -10,12 +19,10 @@
         <article>
             <img src="<%= p.img %>" alt="<%= p.nome%>">
             <a href="/pizzas/<%= p.id %>">Ver Mais</a>
-
-            <form action="/pizzas/addCart" method="post">
-                <input type="hidden" value="<%= p.id %>" name="theChosenOne">
-                <button type="submit">+Add</button>
-            </form>
-
+           <form action="/pizzas/addCart" method="post">
+            <input type="hidden" name="theChosenOne" value="<%= p.id %>">
+            <button type="submit">+Add</button>
+           </form> 
             <div><%= p.nome %></div>
             <span>R$ <%= p.preco %></span>
         </article>

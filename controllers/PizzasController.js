@@ -5,7 +5,14 @@ const pizzas = require('../database/pizzas.json');
 module.exports = {
 
     index: (req, res) => {
-        res.render('index.ejs',{ pizzas });
+
+        let quantidade = 0;
+        
+        if(req.session.pizzas){
+            quantidade = req.session.pizzas.length;
+        }
+
+        res.render('index.ejs',{ pizzas, quantidade });
     },
 
     show: (req, res) => {
@@ -43,6 +50,19 @@ module.exports = {
 
          console.log(req.session)
 
+    },
+
+    showCart: (req, res) => {
+        req.session.pizzas
+
+        let getPizzaById = (id) => {
+            let pizzaEncontrada = pizzas.find(p => p.id == id);
+            return pizzaEncontrada;
+        }
+
+        let pizzasDoCarrinho = req.session.pizzas.map(getPizzaById);
+
+        res.render('cart.ejs', {pizzasDoCarrinho});
     }
 
 
