@@ -60,9 +60,10 @@ module.exports = {
             return pizzaEncontrada;
         }
 
+        let usuarioLogado = req.session.usuario != undefined;
         let pizzasNoCarrinho = req.session.pizzas.map(getPizzaById);
 
-        res.render('cart.ejs', {pizzasNoCarrinho});
+        res.render('cart.ejs', {pizzasNoCarrinho, usuarioLogado});
     }
 
 

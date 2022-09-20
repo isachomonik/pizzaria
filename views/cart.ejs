@@ -25,7 +25,9 @@
         <span id="total">
             Total: R$ 999,99
         </span>
+        <% if(!usuarioLogado) { %>
         <a id="linkEntrar" href="/usuarios/entrar">Faça o login ou cadastre-se</a>
+        <%} else { %>
         <form id="formAddPedido" action="/pizzas/addPedido" method="post">
             <label>
                 <span>Endereço de Entrega:</span>
@@ -51,6 +53,7 @@
                 <button type="submit">Finalizar Pedido</button>
             </footer>
         </form>
+        <% } %>
         <% } else { %>
             Nenhuma pizza no carrinho
         <% } %>

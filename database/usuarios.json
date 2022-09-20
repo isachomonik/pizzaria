@@ -1,0 +1,72 @@
+[
+    {
+        "email": "teste@teste",
+        "senha": "$2b$10$UA4bm7BLVxYEUy8lL50dbuALx0TnF1OW1KK0Bdr916nM7Qx4RrxDm",
+        "enderecos": [
+            "marcelo"
+        ]
+    },
+    {
+        "email": "teste@teste2323",
+        "senha": "$2b$10$ulywnaPKY75GOEDWYCQNJe1mbzSxtB2DmnrIKZPOYL0kMPWxBvBbK",
+        "enderecos": [
+            "aorkaokr"
+        ]
+    },
+    {
+        "email": "asidja@masra",
+        "senha": "$2b$10$2SKqJ4PTVtejCwG3yBca8.F3L3PvYqU.H8ddMqa1WILugE.HnP6LC",
+        "enderecos": [
+            "2323232"
+        ]
+    },
+    {
+        "email": "marcelo@teste",
+        "senha": "$2b$10$b.23Ts3yBFVwZDkc00psteKxqFX89aCeWkhlHHLIDKxwQ0bzhEHkG",
+        "enderecos": [
+            "uilidaoisd"
+        ]
+    },
+    {
+        "email": "marcelo@teste",
+        "senha": "$2b$10$5SVXaSJQfW1kjr.kpCkWrODO7CtrrsJk/7qwq5aSKKpxdcfc9k.OC",
+        "enderecos": [
+            "uilidaoisd"
+        ]
+    },
+    {
+        "email": "teste@teste2",
+        "senha": "$2b$10$i5lY0mgzZnWVoT.dLiYKj.e/bk.oeyAgmAa/PIHbEbo6oj8HOXUWy",
+        "enderecos": [
+            "312312312313"
+        ]
+    },
+    {
+        "email": "teste@teste2",
+        "senha": "$2b$10$lFFXBlhh/qouzJ4YzrK6mu9Dswq.krcFI1ZxJ.QeVH5J5qSPdSkbe",
+        "enderecos": [
+            "312312312313"
+        ]
+    },
+    {
+        "email": "teste@teste",
+        "senha": "$2b$10$4MnpwIfiqkjowCvbBXY8eOC/1TR8q18OgA7g1LBd.jCP61EWwEOmy",
+        "enderecos": [
+            "123123132"
+        ]
+    },
+    {
+        "email": "teste@teste",
+        "senha": "$2b$10$0aRD85ZjpWOkKBWp1PR3KukIlxXIIk2DM5ELnu1mWj8WLuD9i8l5u",
+        "enderecos": [
+            "3232"
+        ]
+    },
+    {
+        "email": "teste@teste23",
+        "senha": "$2b$10$fOqF2AAagBs9IEwB6qYG7ewe2r1ecP6a9vQpLUxDYnNEJvmrmY.Ee",
+        "enderecos": [
+            "aisdaij"
+        ]
+    }
+]
