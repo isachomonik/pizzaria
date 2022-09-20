@@ -60,9 +60,9 @@ module.exports = {
             return pizzaEncontrada;
         }
 
-        let pizzasDoCarrinho = req.session.pizzas.map(getPizzaById);
+        let pizzasNoCarrinho = req.session.pizzas.map(getPizzaById);
 
-        res.render('cart.ejs', {pizzasDoCarrinho});
+        res.render('cart.ejs', {pizzasNoCarrinho});
     }
 
 

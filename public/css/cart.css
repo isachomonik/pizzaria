@@ -26,3 +26,43 @@ div table img {
     width: 100%;
     display: block;
 }
+
+#total {
+    display: block;
+    padding: 20px;
+    text-align: right;
+    font-size: 22px;
+}
+
+#linkEntrar {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    border-top: 1px dashed #333;
+    padding-top: 20px;
+    color: #FFF;
+}
+
+#formAddPedido {
+    border-top: 1px dashed #333;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+#formAddPedido button {
+    border: none;
+    background-color: var(--cor-principal);
+    color: #FFF;
+    padding: 10px 20px;
+}
+
+#formAddPedido a{
+    color: rgb(6, 145, 177)
+}
+
+#formAddPedido footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dashed #333;
+    padding-top: 20px;
+}
